@@ -1,483 +1,542 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaron Wu · 品牌設計與多媒體創作者</title>
-  <meta name="description" content="視覺設計師 Aaron Wu 的個人作品集，涵蓋品牌設計、影音製作、互動體驗案例與跨領域合作故事，並提供最新近況與聯絡方式。" />
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aaron Wu · 品牌設計與多媒體創作者</title>
+    <meta
+      name="description"
+      content="視覺設計師 Aaron Wu 的個人作品集，涵蓋品牌設計、影音製作、互動體驗案例與跨領域合作故事，並提供最新近況與聯絡方式。" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, -apple-system, "Segoe UI", sans-serif;
-      line-height: 1.7;
-      color: #1f2933;
-      background: #f8fafc;
-    }
+      body {
+        margin: 0;
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+          system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.7;
+        color: #1f2933;
+        background: #f8fafc;
+      }
 
-    a {
-      color: inherit;
-    }
+      a {
+        color: inherit;
+      }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-    }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+      }
 
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+      .container {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
 
-    header {
-      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
-      color: #f8fafc;
-      padding: 2.5rem 0 3.5rem;
-    }
+      header {
+        background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+        color: #f8fafc;
+        padding: 2.5rem 0 3.5rem;
+      }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      font-size: 0.95rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.2);
-      transition: background 0.2s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      background: rgba(15, 23, 42, 0.4);
-    }
-
-    .hero {
-      display: grid;
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2.3rem, 5vw, 3.4rem);
-      font-weight: 700;
-    }
-
-    .hero p {
-      margin: 1rem 0 0;
-      max-width: 40rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .hero-cta a {
-      background: #f8fafc;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .hero-cta a:hover,
-    .hero-cta a:focus {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.32);
-    }
-
-    main {
-      padding: 4rem 0;
-    }
-
-    section + section {
-      margin-top: 4rem;
-    }
-
-    h2 {
-      margin: 0 0 1.5rem;
-      font-size: clamp(1.75rem, 4vw, 2.4rem);
-      font-weight: 700;
-      color: #0f172a;
-    }
-
-    .section-intro {
-      max-width: 42rem;
-      margin-bottom: 2rem;
-      color: #475569;
-    }
-
-    .about-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
-    .about-card {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 18px;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1.5rem 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .tag-list li {
-      background: #e0e7ff;
-      color: #1d4ed8;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: #ffffff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-card-content {
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      color: #475569;
-    }
-
-    .project-meta span {
-      background: #f1f5f9;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-    }
-
-    .project-card a {
-      align-self: flex-start;
-      text-decoration: none;
-      color: #1d4ed8;
-      font-weight: 600;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .timeline-item {
-      background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
-    }
-
-    .timeline-item h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.15rem;
-      color: #1d4ed8;
-    }
-
-    .timeline-item time {
-      font-size: 0.85rem;
-      color: #64748b;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    .contact-card {
-      background: #0f172a;
-      color: #f8fafc;
-      border-radius: 22px;
-      padding: 2.5rem;
-      display: grid;
-      gap: 1.5rem;
-      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .contact-actions a {
-      text-decoration: none;
-      background: #facc15;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 14px 35px rgba(250, 204, 21, 0.35);
-    }
-
-    .contact-actions a:hover,
-    .contact-actions a:focus {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 45px rgba(250, 204, 21, 0.4);
-    }
-
-    footer {
-      padding: 2rem 0 3rem;
-      color: #475569;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: #1d4ed8;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    @media (min-width: 768px) {
       nav {
-        gap: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.95rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.2);
+        transition: background 0.2s ease;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        background: rgba(15, 23, 42, 0.4);
       }
 
       .hero {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: center;
+        display: grid;
+        gap: 2rem;
+        margin-top: 2.5rem;
       }
 
-      .hero img {
-        justify-self: end;
-        max-width: 420px;
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(2.3rem, 5vw, 3.4rem);
+        font-weight: 700;
+      }
+
+      .hero p {
+        margin: 1rem 0 0;
+        max-width: 40rem;
+      }
+
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .hero-cta a {
+        background: #f8fafc;
+        color: #0f172a;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hero-cta a:hover,
+      .hero-cta a:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.32);
+      }
+
+      main {
+        padding: 4rem 0;
+      }
+
+      section + section {
+        margin-top: 4rem;
+      }
+
+      h2 {
+        margin: 0 0 1.5rem;
+        font-size: clamp(1.75rem, 4vw, 2.4rem);
+        font-weight: 700;
+        color: #0f172a;
+      }
+
+      .section-intro {
+        max-width: 42rem;
+        margin-bottom: 2rem;
+        color: #475569;
       }
 
       .about-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        gap: 2rem;
+      }
+
+      .about-card {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .tag-list li {
+        background: #e0e7ff;
+        color: #1d4ed8;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
       }
 
       .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        background: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card-content {
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: #475569;
+      }
+
+      .project-meta span {
+        background: #f1f5f9;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+      }
+
+      .project-card a {
+        align-self: flex-start;
+        text-decoration: none;
+        color: #1d4ed8;
+        font-weight: 600;
       }
 
       .timeline {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .portfolio-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2rem;
       }
 
-      .timeline {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      .timeline-item {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
       }
-    }
-  </style>
-</head>
-<body>
-  <header id="top">
-    <div class="container">
-      <nav aria-label="主要導覽">
-        <a href="#about">關於 Aaron</a>
-        <a href="#portfolio">作品精選</a>
-        <a href="#process">創作流程</a>
-        <a href="#contact">聯絡合作</a>
-      </nav>
-      <div class="hero">
-        <div>
-          <h1>Aaron Wu｜品牌敘事與互動影像設計</h1>
-          <p>
-            我是一位總部位於洛杉磯的視覺與互動設計師，聚焦品牌策略、攝影與沉浸式體驗。過去十年，我為全球音樂人、潮流品牌與科技新創打造視覺語言，並以敘事與質感延展作品的情感層次。
+
+      .timeline-item h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.15rem;
+        color: #1d4ed8;
+      }
+
+      .timeline-item time {
+        font-size: 0.85rem;
+        color: #64748b;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .contact-card {
+        background: #0f172a;
+        color: #f8fafc;
+        border-radius: 22px;
+        padding: 1.5rem;
+        display: grid;
+        gap: 1.5rem;
+        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .contact-actions a {
+        text-decoration: none;
+        word-break: break-all;
+        background: #facc15;
+        color: #0f172a;
+        padding: 0.75rem;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 14px 35px rgba(250, 204, 21, 0.35);
+      }
+
+      .contact-actions a:hover,
+      .contact-actions a:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 45px rgba(250, 204, 21, 0.4);
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        color: #475569;
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      footer a {
+        color: #1d4ed8;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      @media (min-width: 768px) {
+        nav {
+          gap: 1.5rem;
+        }
+
+        .hero {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          align-items: center;
+        }
+
+        .hero img {
+          justify-self: end;
+          max-width: 420px;
+        }
+
+        .about-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .portfolio-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .timeline {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .portfolio-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .timeline {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="top">
+      <div class="container">
+        <nav aria-label="主要導覽">
+          <a href="#about">關於 Aaron</a>
+          <a href="#portfolio">作品精選</a>
+          <a href="#process">創作流程</a>
+          <a href="#contact">聯絡合作</a>
+        </nav>
+        <div class="hero">
+          <div>
+            <h1>Aaron Wu｜品牌敘事與互動影像設計</h1>
+            <p>
+              我是一位總部位於洛杉磯的視覺與互動設計師，聚焦品牌策略、攝影與沉浸式體驗。過去十年，我為全球音樂人、潮流品牌與科技新創打造視覺語言，並以敘事與質感延展作品的情感層次。
+            </p>
+            <div class="hero-cta">
+              <a
+                href="https://www.worksbyaaron.com/portfolio"
+                target="_blank"
+                rel="noopener"
+                >查看完整作品集</a
+              >
+              <a href="mailto:hello@worksbyaaron.com">寫信給我</a>
+            </div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=820&q=80"
+            alt="Aaron Wu 的創作工作桌與攝影器材" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about">
+        <div class="container">
+          <h2>關於 Aaron</h2>
+          <p class="section-intro">
+            透過結合品牌策略、影像敘事與空間感知，我協助客戶創造具有感染力的視覺體驗。我的作品集涵蓋專輯包裝、MV
+            美術指導、商業攝影、沉浸式活動設計與自發藝術計畫。
           </p>
-          <div class="hero-cta">
-            <a href="https://www.worksbyaaron.com/portfolio" target="_blank" rel="noopener">查看完整作品集</a>
-            <a href="mailto:hello@worksbyaaron.com">寫信給我</a>
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>創作理念</h3>
+              <p>
+                每個品牌都擁有獨特聲音。我從研究文化脈絡與受眾習慣開始，透過色彩、質地與音景塑造具共鳴的體驗。作品常見的元素包含光影、街頭符碼與跨媒材的層次拼貼。
+              </p>
+              <ul class="tag-list">
+                <li>品牌策略</li>
+                <li>視覺敘事</li>
+                <li>多媒體整合</li>
+              </ul>
+            </article>
+            <article class="about-card">
+              <h3>合作對象</h3>
+              <p>
+                我與 Spotify、88rising、華納音樂、Nike、Netflix
+                及獨立創作者合作，提供從企劃到執行的整合服務。團隊形式彈性，可依專案需求擴充動態影像、開發與製作夥伴。
+              </p>
+              <ul class="tag-list">
+                <li>全球音樂產業</li>
+                <li>潮流品牌</li>
+                <li>科技新創</li>
+              </ul>
+            </article>
           </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=820&q=80" alt="Aaron Wu 的創作工作桌與攝影器材" />
-      </div>
-    </div>
-  </header>
+      </section>
 
-  <main>
-    <section id="about">
-      <div class="container">
-        <h2>關於 Aaron</h2>
-        <p class="section-intro">
-          透過結合品牌策略、影像敘事與空間感知，我協助客戶創造具有感染力的視覺體驗。我的作品集涵蓋專輯包裝、MV 美術指導、商業攝影、沉浸式活動設計與自發藝術計畫。
-        </p>
-        <div class="about-grid">
-          <article class="about-card">
-            <h3>創作理念</h3>
-            <p>
-              每個品牌都擁有獨特聲音。我從研究文化脈絡與受眾習慣開始，透過色彩、質地與音景塑造具共鳴的體驗。作品常見的元素包含光影、街頭符碼與跨媒材的層次拼貼。
-            </p>
-            <ul class="tag-list">
-              <li>品牌策略</li>
-              <li>視覺敘事</li>
-              <li>多媒體整合</li>
-            </ul>
-          </article>
-          <article class="about-card">
-            <h3>合作對象</h3>
-            <p>
-              我與 Spotify、88rising、華納音樂、Nike、Netflix 及獨立創作者合作，提供從企劃到執行的整合服務。團隊形式彈性，可依專案需求擴充動態影像、開發與製作夥伴。
-            </p>
-            <ul class="tag-list">
-              <li>全球音樂產業</li>
-              <li>潮流品牌</li>
-              <li>科技新創</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <div class="container">
-        <h2>作品精選</h2>
-        <p class="section-intro">
-          下列案例節選自官方網站作品集，涵蓋不同類型與規模的合作。更多影像與專案細節，歡迎造訪完整作品頁面。
-        </p>
-        <div class="portfolio-grid">
-          <article class="project-card">
-            <img src="https://images.unsplash.com/photo-1520531158340-44015069e78e?auto=format&fit=crop&w=900&q=80" alt="88rising 演唱會的舞台燈光與視覺投影" />
-            <div class="project-card-content">
-              <h3>88rising Head In The Clouds</h3>
-              <p>
-                擔任節目視覺總監，統籌舞台投影、活動識別與周邊物料。透過霓虹色調與大膽排版串連亞裔流行文化能量，吸引超過四萬名樂迷參與。
-              </p>
-              <div class="project-meta">
-                <span>活動視覺</span>
-                <span>品牌識別</span>
-                <span>洛杉磯</span>
-              </div>
-              <a href="https://www.worksbyaaron.com/portfolio/88rising" target="_blank" rel="noopener">檢視專案</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Spotify 線上活動的沉浸式投影空間" />
-            <div class="project-card-content">
-              <h3>Spotify Audio Playground</h3>
-              <p>
-                為 Spotify Premium 推出的沉浸式聆聽體驗設計互動旅程。結合音場燈光與動態視覺，讓觀眾在三個主題空間探索「聲音化為實體」的敘事。
-              </p>
-              <div class="project-meta">
-                <span>沉浸式體驗</span>
-                <span>互動設計</span>
-                <span>紐約</span>
-              </div>
-              <a href="https://www.worksbyaaron.com/portfolio/spotify" target="_blank" rel="noopener">檢視專案</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80" alt="時尚品牌聯名快閃店的陳列與燈光" />
-            <div class="project-card-content">
-              <h3>Nike x Netflix Collab Lab</h3>
-              <p>
-                與雙方團隊共同開發快閃概念店，以劇集場景為靈感打造沉浸式購物動線，設計開幕活動的視覺主視覺與社群素材，成功創造破紀錄的排隊人潮。
-              </p>
-              <div class="project-meta">
-                <span>零售體驗</span>
-                <span>跨界合作</span>
-                <span>互動展覽</span>
-              </div>
-              <a href="https://www.worksbyaaron.com/portfolio/nike-netflix" target="_blank" rel="noopener">檢視專案</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container">
-        <h2>創作流程與近況</h2>
-        <p class="section-intro">
-          從調研到執行，我重視與夥伴的透明溝通與實驗精神。以下紀錄近期的工作節奏，呈現專案如何從概念走向現場體驗。
-        </p>
-        <div class="timeline">
-          <article class="timeline-item">
-            <time datetime="2025-01">2025.01</time>
-            <h3>洛杉磯工作室擴編</h3>
-            <p>新添攝影與調光空間，升級影像製作設備，支援大型品牌拍攝與沉浸式活動的即時視覺測試。</p>
-          </article>
-          <article class="timeline-item">
-            <time datetime="2024-11">2024.11</time>
-            <h3>高雄藝術特展《Urban Echo》</h3>
-            <p>以城市聲響為靈感的沉浸式展演，結合光雕投影與觸覺裝置，吸引三萬名觀眾體驗。</p>
-          </article>
-          <article class="timeline-item">
-            <time datetime="2024-07">2024.07</time>
-            <h3>與華納音樂合作打造新人出道視覺</h3>
-            <p>從品牌定位、視覺腳本到 MV 美術指導全程參與，創造一致的視覺記憶點並提升社群聲量。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2>聯絡合作</h2>
-        <div class="contact-card">
-          <p>
-            如果你正在籌備品牌升級、活動策展或跨媒體創作，歡迎與我討論。我樂於與多元團隊協作，探索視覺在音樂、時尚與科技領域的無限可能。
+      <section id="portfolio">
+        <div class="container">
+          <h2>作品精選</h2>
+          <p class="section-intro">
+            下列案例節選自官方網站作品集，涵蓋不同類型與規模的合作。更多影像與專案細節，歡迎造訪完整作品頁面。
           </p>
-          <div class="contact-actions">
-            <a href="mailto:hello@worksbyaaron.com">hello@worksbyaaron.com</a>
-            <a href="https://www.instagram.com/worksbyaaron" target="_blank" rel="noopener">Instagram @worksbyaaron</a>
+          <div class="portfolio-grid">
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1520531158340-44015069e78e?auto=format&fit=crop&w=900&q=80"
+                alt="88rising 演唱會的舞台燈光與視覺投影" />
+              <div class="project-card-content">
+                <h3>88rising Head In The Clouds</h3>
+                <p>
+                  擔任節目視覺總監，統籌舞台投影、活動識別與周邊物料。透過霓虹色調與大膽排版串連亞裔流行文化能量，吸引超過四萬名樂迷參與。
+                </p>
+                <div class="project-meta">
+                  <span>活動視覺</span>
+                  <span>品牌識別</span>
+                  <span>洛杉磯</span>
+                </div>
+                <a
+                  href="https://www.worksbyaaron.com/portfolio/88rising"
+                  target="_blank"
+                  rel="noopener"
+                  >檢視專案</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+                alt="Spotify 線上活動的沉浸式投影空間" />
+              <div class="project-card-content">
+                <h3>Spotify Audio Playground</h3>
+                <p>
+                  為 Spotify Premium
+                  推出的沉浸式聆聽體驗設計互動旅程。結合音場燈光與動態視覺，讓觀眾在三個主題空間探索「聲音化為實體」的敘事。
+                </p>
+                <div class="project-meta">
+                  <span>沉浸式體驗</span>
+                  <span>互動設計</span>
+                  <span>紐約</span>
+                </div>
+                <a
+                  href="https://www.worksbyaaron.com/portfolio/spotify"
+                  target="_blank"
+                  rel="noopener"
+                  >檢視專案</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
+                alt="時尚品牌聯名快閃店的陳列與燈光" />
+              <div class="project-card-content">
+                <h3>Nike x Netflix Collab Lab</h3>
+                <p>
+                  與雙方團隊共同開發快閃概念店，以劇集場景為靈感打造沉浸式購物動線，設計開幕活動的視覺主視覺與社群素材，成功創造破紀錄的排隊人潮。
+                </p>
+                <div class="project-meta">
+                  <span>零售體驗</span>
+                  <span>跨界合作</span>
+                  <span>互動展覽</span>
+                </div>
+                <a
+                  href="https://www.worksbyaaron.com/portfolio/nike-netflix"
+                  target="_blank"
+                  rel="noopener"
+                  >檢視專案</a
+                >
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Works by Aaron · 以設計連結人與品牌的情感</p>
-      <p>
-        了解更多：
-        <a href="https://www.worksbyaaron.com/about" target="_blank" rel="noopener">About</a>
-        ·
-        <a href="https://www.worksbyaaron.com/contact" target="_blank" rel="noopener">Contact</a>
-      </p>
-    </div>
-  </footer>
-</body>
+      <section id="process">
+        <div class="container">
+          <h2>創作流程與近況</h2>
+          <p class="section-intro">
+            從調研到執行，我重視與夥伴的透明溝通與實驗精神。以下紀錄近期的工作節奏，呈現專案如何從概念走向現場體驗。
+          </p>
+          <div class="timeline">
+            <article class="timeline-item">
+              <time datetime="2025-01">2025.01</time>
+              <h3>洛杉磯工作室擴編</h3>
+              <p>
+                新添攝影與調光空間，升級影像製作設備，支援大型品牌拍攝與沉浸式活動的即時視覺測試。
+              </p>
+            </article>
+            <article class="timeline-item">
+              <time datetime="2024-11">2024.11</time>
+              <h3>高雄藝術特展《Urban Echo》</h3>
+              <p>
+                以城市聲響為靈感的沉浸式展演，結合光雕投影與觸覺裝置，吸引三萬名觀眾體驗。
+              </p>
+            </article>
+            <article class="timeline-item">
+              <time datetime="2024-07">2024.07</time>
+              <h3>與華納音樂合作打造新人出道視覺</h3>
+              <p>
+                從品牌定位、視覺腳本到 MV
+                美術指導全程參與，創造一致的視覺記憶點並提升社群聲量。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2>聯絡合作</h2>
+          <div class="contact-card">
+            <p>
+              如果你正在籌備品牌升級、活動策展或跨媒體創作，歡迎與我討論。我樂於與多元團隊協作，探索視覺在音樂、時尚與科技領域的無限可能。
+            </p>
+            <div class="contact-actions">
+              <a href="mailto:hello@worksbyaaron.com">hello@worksbyaaron.com</a>
+              <a
+                href="https://www.instagram.com/worksbyaaron"
+                target="_blank"
+                rel="noopener"
+                >Instagram @worksbyaaron</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Works by Aaron · 以設計連結人與品牌的情感</p>
+        <p>
+          了解更多：
+          <a
+            href="https://www.worksbyaaron.com/about"
+            target="_blank"
+            rel="noopener"
+            >About</a
+          >
+          ·
+          <a
+            href="https://www.worksbyaaron.com/contact"
+            target="_blank"
+            rel="noopener"
+            >Contact</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
